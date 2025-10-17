@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-public class pattern01 {
+public class pattern02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
-        for(int row=0;row<number;row++){
-            for(int col=0;col<number;col++){
+        for(int row=0;row<number;row++,System.out.println()){
+            for(int col=0;col<=row;col++){
                 System.out.print("*");
             }
-            System.out.println();
         }
+        
         scanner.close();
     }
 }
