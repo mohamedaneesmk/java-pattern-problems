@@ -1,0 +1,15 @@
+# Ignore all compiled class files
+*.class
+
+# (Optional) Ignore IDE or build folders
+/bin/
+/build/
+/out/
+/target/
+
+# (Optional) Ignore OS or IDE junk
+*.log
+*.tmp
+.DS_Store
+.idea/
+.vscode/
