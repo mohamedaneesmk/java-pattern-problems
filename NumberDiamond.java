@@ -2,31 +2,30 @@ public class NumberDiamond {
     public static void main(String[] args) {
         int num = 4;
 
-        // Print top half
-        printDiamond(num, 1, num);
-
-        // Print bottom half
-        printDiamond(num - 1, 1, num);
-    }
-
-    // Method to print one half of the diamond
-    private static void printDiamond(int rows, int start, int total) {
-        for (int row = rows; row >= start; row--) {
-            // Print leading spaces
-            for (int s = 0; s < total - row; s++) {
+        for (int row = 1; row <= num; row++) {
+            for (int spaces = num - row; spaces > 0; spaces--) {
                 System.out.print(" ");
             }
-
-            // Print descending numbers
-            for (int col = row; col >= 1; col--) {
-                System.out.print(col);
+            for (int col = row; col > 0; col--) {
+                System.out.print(col + "");
             }
 
-            // Print ascending numbers starting from 2
+            for (int col = 2; col <= row; col++) {
+                System.out.print(col + "");
+            }
+            System.out.println();
+        }
+
+        for (int row = num - 1; row > 0; row--) {
+            for (int spaces = num - row; spaces > 0; spaces--) {
+                System.out.print(" ");
+            }
+            for (int col = row; col > 0; col--) {
+                System.out.print(col);
+            }
             for (int col = 2; col <= row; col++) {
                 System.out.print(col);
             }
-
             System.out.println();
         }
     }
