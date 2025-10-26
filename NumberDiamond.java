@@ -1,4 +1,4 @@
-public class NumberPyramid {
+public class NumberDiamond {
     public static void main(String[] args) {
         int num = 8; 
 
