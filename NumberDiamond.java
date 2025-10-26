@@ -1,37 +1,30 @@
 public class NumberDiamond {
     public static void main(String[] args) {
-        int num = 8; 
+        int num = 4;
 
-        // Top half including the center
-        for (int i = 1; i <= num; i++) {
-            // Print leading spaces
-            for (int spaces = 0; spaces < (num - i); spaces++) {
-                System.out.print("  ");
+        for (int row = 1; row <= num; row++) {
+            for (int spaces = num - row; spaces > 0; spaces--) {
+                System.out.print(" ");
             }
-            // Print descending numbers
-            for (int j = i; j >= 1; j--) {
-                System.out.print(j + " ");
+            for (int col = row; col > 0; col--) {
+                System.out.print(col + "");
             }
-            // Print ascending numbers
-            for (int j = 2; j <= i; j++) {
-                System.out.print(j + " ");
+
+            for (int col = 2; col <= row; col++) {
+                System.out.print(col + "");
             }
             System.out.println();
         }
 
-        // Bottom half (excluding center)
-        for (int i = num - 1; i >= 1; i--) {
-            // Print leading spaces
-            for (int spaces = 0; spaces < (num - i); spaces++) {
-                System.out.print("  ");
+        for (int row = num - 1; row > 0; row--) {
+            for (int spaces = num - row; spaces > 0; spaces--) {
+                System.out.print(" ");
             }
-            // Print descending numbers
-            for (int j = i; j >= 1; j--) {
-                System.out.print(j + " ");
+            for (int col = row; col > 0; col--) {
+                System.out.print(col);
             }
-            // Print ascending numbers
-            for (int j = 2; j <= i; j++) {
-                System.out.print(j + " ");
+            for (int col = 2; col <= row; col++) {
+                System.out.print(col);
             }
             System.out.println();
         }
